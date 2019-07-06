@@ -15,7 +15,7 @@ public class Main{
             File2 - POS     
         */
         String caminho;
-        caminho = "D:\\Faculdade\\Trabalho Final - POO\\Version1\\arquivos\\arquivo2.txt";
+        caminho = "D:\\Faculdade\\Trabalho Final - POO\\Version1\\arquivos\\arquivo1.txt";
         
         //Chamar os Métodos
         novo.criar(caminho);
