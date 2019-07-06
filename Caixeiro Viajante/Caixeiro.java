@@ -94,18 +94,30 @@ public class Caixeiro implements CaixeiroInterface{
     
     //Distância entre duas(2) cidades
     @Override
-    public double distancia(int cidade1, int cidade2){
+    public double distancia(int cidade1, int cidade2) throws CidadeInvalida{
         
+        if(cidade1 >= verificacao() || cidade2 >= verificacao()){
+            
+            throw new CidadeInvalidaDupla(cidade1, cidade2,verificacao());
+            
+        }
+
         double d;
         d = caixeiro.distancia(cidade1, cidade2);
         System.out.println("Distância entre " + cidade1 + " e " + cidade2 + ": " + d);
-        return d;
-        
+        return d;           
+             
     }
     
     //Retorna a cidade mais próxima
     @Override
-    public int proxima(int cidade){
+    public int proxima(int cidade) throws CidadeInvalida{
+        
+        if (cidade >= verificacao() || cidade < 0){
+            
+            throw new CidadeInvalida(cidade);
+            
+        }
         
         int prox;
         prox = caixeiro.proxima(cidade);

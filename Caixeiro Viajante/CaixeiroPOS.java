@@ -26,7 +26,7 @@ public class CaixeiroPOS extends CaixeiroAbstrato{
     }
     
     @Override
-    public double distancia(int cidade1, int cidade2){
+    public double distancia(int cidade1, int cidade2) throws CidadeInvalida {
 
         double xfinal, yfinal, d;
         
@@ -43,7 +43,7 @@ public class CaixeiroPOS extends CaixeiroAbstrato{
     }
     
     @Override 
-    public int proxima(int cidade){
+    public int proxima(int cidade) throws CidadeInvalida{
         
         int prox = cidade;        
         double[] distancias = new double[getN()];

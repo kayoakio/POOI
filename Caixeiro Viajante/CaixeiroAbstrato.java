@@ -37,8 +37,8 @@ public abstract class CaixeiroAbstrato{
     
     //Override
     public abstract void criar(String caminho) throws IOException;
-    public abstract double distancia(int cidade1, int cidade2);
-    public abstract int proxima(int cidade);
+    public abstract double distancia(int cidade1, int cidade2) throws CidadeInvalida;
+    public abstract int proxima(int cidade) throws CidadeInvalida;
     public abstract void mostrar();
     
 } //CaixeiroAbstrato

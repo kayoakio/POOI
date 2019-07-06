@@ -15,9 +15,9 @@ public interface CaixeiroInterface{
     public abstract void mostrar();
     
     //Distância entre duas(2) cidades
-    public abstract double distancia(int cidade1, int cidade2);
+    public abstract double distancia(int cidade1, int cidade2) throws CidadeInvalida;
     
     //Retorna a cidade mais próxima
-    public abstract int proxima(int cidade);
+    public abstract int proxima(int cidade) throws CidadeInvalida;
     
 } //CaixeiroInterface
